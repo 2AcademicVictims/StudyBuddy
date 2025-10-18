@@ -1,7 +1,7 @@
 # FastAPI and WebSocket support
 fastapi==0.115.0
 uvicorn[standard]==0.32.0
-websockets==13.1
+websockets>=15.0
 python-dotenv==1.0.1
 
 # Multi-LLM APIs
@@ -14,4 +14,8 @@ groq==0.11.0
 python-multipart==0.0.12
 
 # HTTP client compatibility
-httpx==0.27.2
+httpx>=0.27.2
+
+# Supabase for database
+supabase>=2.22.0
+realtime>=2.22.0

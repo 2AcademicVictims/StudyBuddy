@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Card, Nav } from 'react-bootstrap';
 import ChatPage from './pages/ChatPage';
+import { FlashcardPage } from './pages/FlashcardPage';
 
 function App() {
   return (
@@ -54,18 +55,8 @@ function StudyBuddyUI() {
       {/* Chat Page */}
       {currentPage === 'chat' && <ChatPage />}
 
-      {/* Flashcards Page (Your partner will build this) */}
-      {currentPage === 'flashcards' && (
-        <Card className="shadow">
-          <Card.Body className="text-center py-5">
-            <div style={{ fontSize: '5rem' }}>📚</div>
-            <h3 className="mt-4">Lecture Flashcards Feature</h3>
-            <p className="text-muted">
-              Your partner will build the flashcard recording and generation here!
-            </p>
-          </Card.Body>
-        </Card>
-      )}
+      {/* Flashcards Page */}
+      {currentPage === 'flashcards' && <FlashcardPage />}
     </Container>
   );
 }

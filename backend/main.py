@@ -12,6 +12,7 @@ load_dotenv()
 
 # Import routers
 from app.routers import chat
+from app.routers import flashcards
 
 # Create FastAPI app
 app = FastAPI(
@@ -31,6 +32,7 @@ app.add_middleware(
 
 # Include routers
 app.include_router(chat.router, tags=["chat"])
+app.include_router(flashcards.router, tags=["flashcards"])
 
 @app.get("/")
 async def root():
